@@ -1,0 +1,479 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/09/15/15/smoke-1246557_960_720.jpg");
+    background-size: cover;
+    color: white;
+}
+
+.message {
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    z-index: 5;
+    border-radius: 0 5px 5px 0;
+    background: #00d4ff;
+    opacity: 1;
+    animation-name: removeMessage;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes removeMessage {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.balance {
+    border: 5px solid white;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 40px;
+    margin: 30px 0 40px 0;
+}
+
+.balanceSmall {
+    border: 5px solid white;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 24px;
+    margin: 10px 0 40px 0;
+}
+
+.popupS, .popupT {
+    display: none;
+    width: 200px;
+    margin: 0px auto;
+    box-shadow: 0 0 80px 20px black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background: rgb(226,46,130);
+    background: linear-gradient(0deg, rgba(226,46,130,1) 0%, rgba(0,212,255,1) 81%);
+    border: 2px solid white;
+    position: relative;
+    overflow: scroll;
+    margin-bottom: -223px; /*To get the main window under popup*/
+    position: relative;
+    z-index: 2;
+}
+
+.popupT {
+    margin-bottom: -244px; /*To get the main window under popup*/
+}
+
+.popper {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+    z-index: 1;
+    position: absolute;
+}
+
+.windowSmall {
+    width: 400px;
+    height: 580px;
+    margin: 20px auto;
+    box-shadow: 0 0 40px 20px black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background: rgb(226,46,130);
+    background: linear-gradient(0deg, rgba(226,46,130,1) 0%, rgba(0,212,255,1) 81%);
+    border: 2px solid white;
+    position: relative;
+    overflow: scroll;
+}
+
+.windowSmall .button {
+    margin-top: 50px;
+}
+
+.windowSmall .accountNumber {
+    margin-bottom: 20px;
+}
+
+.windowSmall .accountNumber img {
+    width: 12px;
+    padding: 5px;
+}
+
+.windowBig {
+    width: 900px;
+    height: 580px;
+    margin: 20px auto;
+    box-shadow: 0 0 40px 20px black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background: rgb(226,46,130);
+    background: linear-gradient(0deg, rgba(226,46,130,1) 0%, rgba(0,212,255,1) 81%);
+    border: 2px solid white;
+    text-align: center;
+    position: relative;
+    overflow: scroll;
+}
+
+.window {
+    width: 500px;
+    max-height: 560px;
+    margin: 20px auto;
+    box-shadow: 0 0 40px 20px black;
+    border-radius: 20px;
+    padding: 20px 30px;
+    background: rgb(226,46,130);
+    background: linear-gradient(0deg, rgba(226,46,130,1) 0%, rgba(0,212,255,1) 81%);
+    border: 2px solid white;
+}
+
+.window h4 {
+    text-align: center;
+    margin: 15px 0 0 0;
+    line-height: 5px;
+}
+
+h1 {
+    margin: 0px 0 30px 0;
+    font-size: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 26px;
+    margin: 10px 0px 0px 0px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+h6 {
+    margin: 5px 0 15px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 96%;
+    padding: 10px 2%;
+    border-radius: 4px;
+    border: 2px solid white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: rgba(255,255,255,0.3);
+    outline: none;
+    color: white;
+}
+
+::placeholder {
+  color: #adebeb;
+}
+
+a {
+    color: inherit;
+}
+
+a:visited {
+    color: white;
+}
+
+.buttons {
+    display: flex;
+}
+
+.button {
+    width: auto;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 10px auto;
+    cursor: pointer;
+    display: block;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background: rgba(255,255,255,0.6);
+    color: #e22e70;
+}
+
+.cleanButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    width: auto;
+    padding-left: 5px;
+}
+
+.icon {
+    width: 40px;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 16px 0 40px 0px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    background-image: url("img/back.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 10px;
+    cursor: pointer;
+}
+
+.topLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 16px 0 40px 0px;
+    background-color: white;
+    padding: 15px;
+}
+
+.topRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0px 16px 0px 40px;
+    background: white;
+    padding: 15px;
+}
+
+.bottomLeft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0px 40px 0px 16px;
+    background: white;
+    padding: 15px;
+}
+
+.bottomRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 40px 0px 16px 0px;
+    background: white;
+    padding: 15px;
+}
+
+.bottomRight img {
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+.bottomLeft img {
+    position: relative;
+    right: 2px;
+    top: 5px;
+}
+
+.topLeft img {
+    position: relative;
+    right: 2px;
+}
+
+.topRight img {
+    position: relative;
+    left: 2px;
+}
+
+.account .amount {
+    text-align: right;
+}
+
+.account {
+    width: 900px;
+    text-align: left;
+}
+
+.account tr {
+    border-bottom: 1px solid white;
+    display: block;
+    padding: 6px 0 0 0;
+}
+
+.account td {
+    width: 300px;
+}
+
+.removeCard {
+    width: 20px;
+    border-radius: 20px;
+    background: white;
+    margin-left: 10px;
+}
+
+.fingerprint {
+        margin: 0 auto;
+        width: 200px;
+        display: none;
+    }
+
+/*MOBILE*/
+@media screen and (max-device-width: 480px){
+    
+    body {
+        background-image: none;
+    }
+    
+    .mobileBg {
+        background: rgb(226,46,130);
+        background: linear-gradient(0deg, rgba(226,46,130,1) 0%, rgba(0,212,255,1) 81%);
+        height: 2000px;
+    }
+    .mobileBg .window{
+        box-shadow: none;
+        background: none;
+    }
+    
+    input, h1,h2,h3,h4,h5,h6,p {
+        font-size: 60px;
+    }
+    
+    .window, .windowSmall, .windowBig {
+        width: 88%;
+        padding: 6%;
+        position: absolute;
+        max-height: 93.5%;
+        height: 200%;
+        margin-top: 0px;
+        border-radius: 0 0 20px;
+        border: none;
+    }
+    .windowSmall p {
+        margin-top: 30px;
+    }
+    
+    .cleanButton {
+        font-size: 60px;
+        font-weight: bold;
+    }
+    
+    .cleanButton {
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+    .button {
+        margin-top: 60px;
+        padding: 40px;
+        border-radius: 20px;
+    }
+    
+    .topLeft, .topRight, .bottomRight, .bottomLeft {
+        padding: 50px;
+    }
+    
+    .topLeft {
+    border-radius: 2px 0 40px 0px;
+}
+
+    .topRight {
+        border-radius: 0px 2px 0px 40px;
+    }
+
+    .bottomLeft {
+        border-radius: 0px 40px 0px 2px;
+    }
+
+    .bottomRight {
+        border-radius: 40px 0px 2px 0px;
+    }
+    
+    .icon {
+        width: 100px;
+    }
+    .balance {
+        font-size: 80px;
+        border: 10px solid white;
+    }
+    .balanceSmall {
+        font-size: 60px;
+        border: 10px solid white;
+        margin-top: 40px;
+    }
+    .back {
+        width: 170px;
+        height: 170px;
+        border-radius: 2px 0 40px 0px;
+        background-size: 80px;
+        background-position-x: 30px;
+    }
+    table {
+        font-size: 40px;
+    }
+    h1 {
+        margin-bottom: 80px;
+    }
+    .message {
+        box-shadow: 0 0 60px 0 black;
+        top: 200px;
+        padding: 20px 40px;
+        border-radius:  0 20px 20px 0;
+    }
+    
+    .popupS {
+        width: 700px;
+        padding-bottom: 40px;
+        margin-bottom: -600px;
+    }
+    
+    .popupT {
+        width: 700px;
+        padding-bottom: 40px;
+        margin-bottom: -680px;
+    }
+    .popper {
+        width: 102%;
+        height: 110%;
+    }
+    .windowSmall .accountNumber img {
+        width: 20px;
+        padding: 20px;
+        border-radius: 40px;
+        margin-left: 20px;
+        top: 4px;
+        position: relative;
+    }
+    .bigMargin {
+        margin-bottom: 450px;
+    }
+    .window h4 {
+        margin: 100px 70px;
+    }
+    .fingerprint {
+        display: block;
+    }
+    
+    .account {
+        width: auto;
+    }
+    .date {
+        width: 180px !important;
+    }
+    .action {
+        width: 360px !important;
+    }
+}
